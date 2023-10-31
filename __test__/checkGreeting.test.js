@@ -23,3 +23,11 @@ test('n°2.2: greet function to return "Hello, my friend." if name is undefined'
 
   expect(result).toBe('Hello, my friend.')
 })
+
+test('n°2.3: greet function to return "Hello, my friend." if name is an empty String', () => {
+  const name = ""
+
+  const result = greet(name)
+
+  expect(result).toBe('Hello, my friend.')
+})
