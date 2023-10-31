@@ -1,8 +1,16 @@
-function greet (names) {
+function greet (name) {
   const defaultValue = 'Hello, my friend.'
-  if (names === null || names === undefined || names === '') { return defaultValue }
 
-  return `Hello, ${names}.`
+  if (!nameIsValid(name)) {
+    return defaultValue
+  }
+
+  return `Hello, ${name}.`
+}
+
+function nameIsValid (name) {
+  if (name === null || name === undefined || name === '') return false
+  else return true
 }
 
 module.exports = { greet }
