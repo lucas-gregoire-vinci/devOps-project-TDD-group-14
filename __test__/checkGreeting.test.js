@@ -8,8 +8,16 @@ test('n°1: greet function to return "Hello, Jean-Kevin." if name is "Jean-Kevin
   expect(result).toBe('Hello, Jean-Kevin.')
 })
 
-test('n°2.1: greet function to return "Hello, my friend." if name is "null"', () => {
+test('n°2.1: greet function to return "Hello, my friend." if name is null', () => {
   const name = null
+
+  const result = greet(name)
+
+  expect(result).toBe('Hello, my friend.')
+})
+
+test('n°2.2: greet function to return "Hello, my friend." if name is undefined', () => {
+  const name = undefined
 
   const result = greet(name)
 
