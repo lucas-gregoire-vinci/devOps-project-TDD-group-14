@@ -25,7 +25,7 @@ test('n°2.2: greet function to return "Hello, my friend." if name is undefined'
 })
 
 test('n°2.3: greet function to return "Hello, my friend." if name is an empty String', () => {
-  const name = ""
+  const name = ''
 
   const result = greet(name)
 

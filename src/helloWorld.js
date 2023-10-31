@@ -1,5 +1,6 @@
 function greet (names) {
-  if (names === null || names === undefined || names === "") return 'Hello, my friend.'
+  const defaultValue = 'Hello, my friend.'
+  if (names === null || names === undefined || names === '') { return defaultValue }
 
   return `Hello, ${names}.`
 }
