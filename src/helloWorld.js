@@ -1,14 +1,17 @@
-function greet (name) {
+function greet (names) {
   const defaultValue = 'Hello, my friend.'
+  const defaultValueArray = 'Hello, '
   const defaultValueUppercase = 'HELLO, '
 
-  if (!nameIsValid(name)) {
+  if (Array.isArray(names)) { return `${defaultValueArray}${names[0]} and ${names[1]}.` }
+
+  if (!nameIsValid(names)) {
     return defaultValue
   }
 
-  if (nameIsInUppercase(name)) return `${defaultValueUppercase}${name}!`
+  if (nameIsInUpperCase(names)) return `${defaultValueUppercase}${names}!`
 
-  return `Hello, ${name}.`
+  return `Hello, ${names}.`
 }
 
 function nameIsValid (name) {
@@ -16,8 +19,8 @@ function nameIsValid (name) {
   else return true
 }
 
-function nameIsInUppercase (name) {
-  if(name === name.toUpperCase()) return true;
+function nameIsInUpperCase (name) {
+  if (name === name.toUpperCase()) return true
   return false
 }
 

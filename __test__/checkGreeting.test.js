@@ -39,3 +39,11 @@ test('n°3: greet function to return "HELLO, JERRY!" if the entierety of the nam
 
   expect(result).toBe('HELLO, JERRY!')
 })
+
+test('n°4: greet function to return "Hello, Kratos and Thanathos." if there are 2 names given in an array', () => {
+  const names = ['Kratos', 'Thanathos']
+
+  const result = greet(names)
+
+  expect(result).toBe('Hello, Kratos and Thanathos.')
+})
