@@ -31,3 +31,11 @@ test('n°2.3: greet function to return "Hello, my friend." if name is an empty S
 
   expect(result).toBe('Hello, my friend.')
 })
+
+test('n°3: greet function to return "HELLO, JERRY!" if the entierety of the name is in uppercase', () => {
+  const name = 'JERRY'
+
+  const result = greet(name)
+
+  expect(result).toBe('HELLO, JERRY!')
+})
