@@ -1,7 +1,7 @@
 function greet (names) {
   const defaultValue = 'Hello, my friend.'
   let defaultValueArray = 'Hello, '
-  let defaultValueUppercase = 'HELLO, '
+  const defaultValueUppercase = 'HELLO, '
 
   if (Array.isArray(names)) {
     const normalNames = []
