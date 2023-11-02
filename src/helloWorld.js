@@ -1,9 +1,18 @@
 function greet (names) {
   const defaultValue = 'Hello, my friend.'
-  const defaultValueArray = 'Hello, '
+  let defaultValueArray = 'Hello, '
   const defaultValueUppercase = 'HELLO, '
 
-  if (Array.isArray(names)) { return `${defaultValueArray}${names[0]} and ${names[1]}.` }
+  if (Array.isArray(names)) {
+    if (names.length === 1) {
+      defaultValueArray += names[0] + '.'
+    } else {
+      const ttSaufDernier = names.slice(0, -1)
+      const last = names.slice(-1)
+      defaultValueArray += ttSaufDernier.join(', ') + ' and ' + last + '.'
+    }
+    return defaultValueArray
+  }
 
   if (!nameIsValid(names)) {
     return defaultValue
