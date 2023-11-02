@@ -60,3 +60,15 @@ test('n°5.1: greet function to return "Hello, Kratos, Thanathos, Hypnos, Jojo, 
   const result = greet(names)
   expect(result).toBe('Hello, Kratos, Thanathos, Hypnos, Jojo, Man and Duck.')
 })
+
+test('n°6: greet function to return "Hello, Kratos and Thanathos. AND HELLO DUCK!" if there are 2 names in lowercase and 1 in uppercase given in an array', () => {
+  const names = ['Kratos', 'Thanathos', 'DUCK']
+  const result = greet(names)
+  expect(result).toBe('Hello, Kratos and Thanathos. AND HELLO, DUCK!')
+})
+
+test('n°6.1: greet function to return "Hello, Kratos and Thanathos. AND HELLO, DUCK, LEN AND JOJO!" if there are 2 names in lowercase and 3 in uppercase given in an array', () => {
+  const names = ['Kratos', 'Thanathos', 'DUCK', 'LEN', 'JOJO']
+  const result = greet(names)
+  expect(result).toBe('Hello, Kratos and Thanathos. AND HELLO, DUCK, LEN, JOJO!')
+})
