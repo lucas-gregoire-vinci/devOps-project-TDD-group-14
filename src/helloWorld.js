@@ -19,9 +19,9 @@ function greet (names) {
       if (normalNames.length === 1) {
         defaultValueArray += normalNames[0] + '!'
       } else {
-        const ttSaufDernier = normalNames.slice(0, -1)
+        const AllButLast = normalNames.slice(0, -1)
         const last = normalNames.slice(-1)
-        defaultValueArray += ttSaufDernier.join(', ') + ' and ' + last + '.'
+        defaultValueArray += AllButLast.join(', ') + ' and ' + last + '.'
       }
     }
 
