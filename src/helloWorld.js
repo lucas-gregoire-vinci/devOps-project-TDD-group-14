@@ -1,9 +1,36 @@
 function greet (names) {
   const defaultValue = 'Hello, my friend.'
-  const defaultValueArray = 'Hello, '
+  let defaultValueArray = 'Hello, '
   const defaultValueUppercase = 'HELLO, '
 
-  if (Array.isArray(names)) { return `${defaultValueArray}${names[0]} and ${names[1]}.` }
+  if (Array.isArray(names)) {
+    const normalNames = []
+    const upperNames = []
+
+    for (let i = 0; i < names.length; i++) {
+      if (nameIsInUpperCase(names[i])) {
+        upperNames.push(names[i])
+      } else {
+        normalNames.push(names[i])
+      }
+    }
+
+    if (normalNames.length > 0) {
+      if (normalNames.length === 1) {
+        defaultValueArray += normalNames[0] + '!'
+      } else {
+        const ttSaufDernier = normalNames.slice(0, -1)
+        const last = normalNames.slice(-1)
+        defaultValueArray += ttSaufDernier.join(', ') + ' and ' + last + '.'
+      }
+    }
+
+    if (upperNames.length > 0) {
+      defaultValueArray += ' AND ' + defaultValueUppercase + upperNames.join(', ') + '!'
+    }
+
+    return defaultValueArray
+  }
 
   if (!nameIsValid(names)) {
     return defaultValue
