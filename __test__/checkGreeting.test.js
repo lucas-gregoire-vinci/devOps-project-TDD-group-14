@@ -72,3 +72,9 @@ test('n°6.1: greet function to return "Hello, Kratos and Thanathos. AND HELLO, 
   const result = greet(names)
   expect(result).toBe('Hello, Kratos and Thanathos. AND HELLO, DUCK, LEN, JOJO!')
 })
+
+test('n°7 : greet function to return "Hello, Marie" if the language is EN', () => {
+  const names = ['Kratos', 'Thanathos', 'Hypnos', 'Jojo', 'Man', 'Duck'];
+  const languages = ['EN', 'FR', 'SP', 'NL', 'DE'];
+  expect(result).toBe('Hello, Marie');
+})
